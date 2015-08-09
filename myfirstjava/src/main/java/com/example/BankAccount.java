@@ -1,6 +1,5 @@
 package com.example;
 
-
 // Setup class format for Bank Account
 public class BankAccount {
 
@@ -26,6 +25,7 @@ public class BankAccount {
 
 // 3 Constructors
     public BankAccount(){
+        System.out.printf("No parameter constructor");
 
     }
 
@@ -33,19 +33,15 @@ public class BankAccount {
         balance = 0;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
+        System.out.println(fname + lname + acctnum + balance);
     }
 
-    public BankAccount(String first_name, String last_name, int accountnumber, double balance){
+    public BankAccount(String first_name, String last_name, int accountnumber, double bala){
         setAcctnum(accountnumber);
         setName(first_name, last_name);
-        setBalance(balance);
+        setBalance(bala);
+        System.out.printf("%s %s %s %s", fname, lname, acctnum, balance);
     }
 
-}
-
-public class MainClass {
-    BankAccount bank1 = new BankAccount();
-    BankAccount bank2 = new BankAccount('nelson', 'chiu', 120202);
-    BankAccount bank3 = new BankAccount('wayne', 'chiu', 123456, 300.00);
 
 }
