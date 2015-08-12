@@ -7,17 +7,23 @@ public class MyMainClass {
 
     public static void main(String [ ] args)
     {
-        BankAccount bank1 = new BankAccount();
-        BankAccount bank2 = new BankAccount("nelson", "chiu", 120202);
-        BankAccount bank3 = new BankAccount("wayne", "chiu", 123456, 300.00);
+        BankAccount b1 = new BankAccount();
+        BankAccount b2 = new BankAccount("nelson", "chiu", 120202);
+        BankAccount b3 = new BankAccount("wayne", "chiu", 123456, 300.00);
 
-        prnt(bank1);
-        prnt(bank2);
-        prnt(bank3);
+        /*
+        prnt(b1);
+        prnt(b2);
+        prnt(b3);
 
-        bank2.transfer(bank3,100);
-        prnt(bank2);
-        prnt(bank3);
+        b2.transfer(b3,100);
+        prnt(b2);
+        prnt(b3);
+        */
+        b1.printNA();
+        b2.printNA();
+        b3.printNA();
+
 
     }
 

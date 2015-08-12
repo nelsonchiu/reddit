@@ -8,6 +8,7 @@ public class BankAccount {
     public String lname;
     public int acctnum;
     public double balance;
+    private static int na = 0;
 
 // Methods listed below
     public void setName(String string1, String string2) {
@@ -47,23 +48,28 @@ public class BankAccount {
         }
     }
 
+    public void printNA(){
+        System.out.println("NA:"+na);
+    }
+
 
 // 3 Constructors
     public BankAccount(){
-        System.out.printf("No parameter constructor");
-
+        na=na+1;
     }
 
     public BankAccount(String first_name, String last_name, int accountnumber){
         balance = 0;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
+        na=na+1;
     }
 
     public BankAccount(String first_name, String last_name, int accountnumber, double bal){
         balance = bal;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
+        na=na+1;
     }
 
 
