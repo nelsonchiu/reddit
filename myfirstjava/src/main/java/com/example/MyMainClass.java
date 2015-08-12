@@ -7,9 +7,9 @@ public class MyMainClass {
 
     public static void main(String [ ] args)
     {
-        BankAccount b1 = new BankAccount();
-        BankAccount b2 = new BankAccount("nelson", "chiu", 120202);
-        BankAccount b3 = new BankAccount("wayne", "chiu", 123456, 300.00);
+        BankAccount b1 = new BankAccount(222);
+        BankAccount b2 = new BankAccount("nelson", "chiu", 120202, 444);
+        BankAccount b3 = new BankAccount("wayne", "chiu", 123456, 300.00,444);
 
         /*
         prnt(b1);

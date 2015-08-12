@@ -9,6 +9,7 @@ public class BankAccount {
     public int acctnum;
     public double balance;
     private static int na = 0;
+    private int pin;
 
 // Methods listed below
     public void setName(String string1, String string2) {
@@ -52,23 +53,31 @@ public class BankAccount {
         System.out.println("NA:"+na);
     }
 
+    public void setPin(int h){
+        pin = h;
+        System.out.println("Your pin is: "+pin);
+    }
+
 
 // 3 Constructors
-    public BankAccount(){
+    public BankAccount(int p){
+        setPin(p);
         na=na+1;
     }
 
-    public BankAccount(String first_name, String last_name, int accountnumber){
+    public BankAccount(String first_name, String last_name, int accountnumber, int p){
         balance = 0;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
+        setPin(p);
         na=na+1;
     }
 
-    public BankAccount(String first_name, String last_name, int accountnumber, double bal){
+    public BankAccount(String first_name, String last_name, int accountnumber, double bal, int p){
         balance = bal;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
+        setPin(p);
         na=na+1;
     }
 
