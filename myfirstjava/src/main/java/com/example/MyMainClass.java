@@ -14,7 +14,10 @@ public class MyMainClass {
         prnt(bank1);
         prnt(bank2);
         prnt(bank3);
-        bank3.withdraw(200);
+
+        bank2.transfer(bank3,100);
+        prnt(bank2);
+        prnt(bank3);
 
     }
 

@@ -35,13 +35,18 @@ public class BankAccount {
 
     }
 
-    public boolean isEmtpy() {
-        if (balance == 0) {
-            return true;
+    public void transfer(BankAccount other, int amt){
+        if(amt <= other.balance) {
+            other.balance = other.balance - amt;
+            balance = balance + amt;
+
         } else {
-            return false;
+            other.balance = 0;
+            balance = balance + other.balance;
+
         }
     }
+
 
 // 3 Constructors
     public BankAccount(){
