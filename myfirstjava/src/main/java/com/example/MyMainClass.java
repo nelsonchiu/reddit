@@ -11,11 +11,20 @@ public class MyMainClass {
         BankAccount bank2 = new BankAccount("nelson", "chiu", 120202);
         BankAccount bank3 = new BankAccount("wayne", "chiu", 123456, 300.00);
 
-        BankAccount bank4 = new BankAccount("jing", "wei", 123213, 300.00, 400);
-
-        BankAccount bank5 = new BankAccount("AR", "AP", 1, 300.00, 150);
+        prnt(bank1);
+        prnt(bank2);
+        prnt(bank3);
+        bank3.withdraw(200);
 
     }
+
+    public static void prnt(BankAccount b){
+        System.out.println("account num: " + b.acctnum);
+        System.out.println("account fname: " + b.fname);
+        System.out.println("account lname: " + b.lname);
+        System.out.println("account balance: " + b.balance);
+    }
+
 
 
 }

@@ -10,9 +10,9 @@ public class BankAccount {
     public double balance;
 
 // Methods listed below
-    public void setName(String first, String last) {
-        fname = first;
-        lname = last;
+    public void setName(String string1, String string2) {
+        fname = string1;
+        lname = string2;
     }
 
     public void setAcctnum(int acct) {
@@ -35,6 +35,14 @@ public class BankAccount {
 
     }
 
+    public boolean isEmtpy() {
+        if (balance == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 // 3 Constructors
     public BankAccount(){
         System.out.printf("No parameter constructor");
@@ -45,23 +53,13 @@ public class BankAccount {
         balance = 0;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
-        System.out.println(fname + lname + acctnum + balance);
     }
 
     public BankAccount(String first_name, String last_name, int accountnumber, double bal){
         balance = bal;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
-        System.out.println(fname + lname + acctnum + balance);
-
     }
 
-    public BankAccount(String first_name, String last_name, int accountnumber, double bal, int amount){
-        balance = bal;
-        setAcctnum(accountnumber);
-        setName(first_name, last_name);
-        withdraw(amount);
-        System.out.println(fname + lname + acctnum + balance);
-    }
 
 }
