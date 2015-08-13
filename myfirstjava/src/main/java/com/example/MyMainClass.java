@@ -7,12 +7,15 @@ public class MyMainClass {
 
     public static void main(String [ ] args)
     {
-        BankAccount b1 = new BankAccount("peaches");
-        BankAccount b2 = new BankAccount("nelson", "chiu", 120202, "george");
+        //BankAccount b1 = new BankAccount("peaches");
+        //BankAccount b2 = new BankAccount("nelson", "chiu", 120202, "george");
         BankAccount b3 = new BankAccount("wayne", "chiu", 123456, 300.00, "falls");
-        b2.withdraw(200,"george");
+        //b2.withdraw(200,"george");
         b3.withdraw(50,"falls");
-        b2.withdraw(200,"g");
+        b3.withdraw(50,"falls");
+        b3.withdraw(50,"falls");
+        b3.withdraw(50,"falls");
+        //b3.withdraw(50,"falls");
         /*
         prnt(b1);
         prnt(b2);
@@ -22,9 +25,9 @@ public class MyMainClass {
         prnt(b2);
         prnt(b3);
         */
-        b1.printNA();
-        b2.printNA();
-        b3.printNA();
+        //b1.printNA();
+        //b2.printNA();
+        //b3.printNA();
 
 
     }

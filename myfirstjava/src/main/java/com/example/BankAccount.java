@@ -11,6 +11,7 @@ public class BankAccount {
     private static int na = 0;
     private String pin;
     private boolean authenticated = false;
+    public int numTrans = 0;
 
 // Methods listed below
     public void setName(String string1, String string2) {
@@ -30,6 +31,8 @@ public class BankAccount {
         authenticate(p);
         System.out.println("Authenticated?" + authenticated);
         if(authenticated) {
+            numTrans = numTrans - 1;
+            System.out.println("numTrans is: "+numTrans);
             if (amount <= balance) {
                 balance = balance - amount;
             } else {
@@ -40,7 +43,6 @@ public class BankAccount {
         } else{
             System.out.println("You are not authorized");
         }
-        logout();
 
     }
 
@@ -71,10 +73,21 @@ public class BankAccount {
     }
 
     public void authenticate(String p){
-        if (p==pin){
-            authenticated = true;
-        } else {
-
+        if(authenticated==true) {
+            if (numTrans == 0) {
+                authenticated = false;
+            } else {
+                System.out.println("Authentication True");
+            }
+        }
+        else {
+            if (p == pin) {
+                authenticated = true;
+                numTrans = 3;
+            }
+            else {
+                authenticated = false;
+            }
         }
     }
 
