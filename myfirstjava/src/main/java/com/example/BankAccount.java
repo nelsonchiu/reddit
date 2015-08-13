@@ -9,7 +9,8 @@ public class BankAccount {
     public int acctnum;
     public double balance;
     private static int na = 0;
-    private int pin;
+    private String pin;
+    private boolean authenticated = false;
 
 // Methods listed below
     public void setName(String string1, String string2) {
@@ -25,27 +26,38 @@ public class BankAccount {
         balance = bal;
     }
 
-    public void withdraw(int amount){
-        if(amount <= balance){
-            balance = balance - amount;
+    public void withdraw(int amount, String p){
+        authenticate(p);
+        System.out.println("Authenticated?" + authenticated);
+        if(authenticated) {
+            if (amount <= balance) {
+                balance = balance - amount;
+            } else {
+                amount = (int) balance;
+                balance = 0;
+            }
+            System.out.printf("You withdrew %s and have %s remaining \n", amount, balance);
+        } else{
+            System.out.println("You are not authorized");
         }
-        else{
-            amount = (int)balance;
-            balance = 0;
-        }
-        System.out.printf("You withdrew %s and have %s remaining", amount, balance);
+        logout();
 
     }
 
-    public void transfer(BankAccount other, int amt){
-        if(amt <= other.balance) {
-            other.balance = other.balance - amt;
-            balance = balance + amt;
+    public void transfer(BankAccount other, int amt, String p){
+        authenticate(p);
+        if(authenticated) {
+            if (amt <= other.balance) {
+                other.balance = other.balance - amt;
+                balance = balance + amt;
 
-        } else {
-            other.balance = 0;
-            balance = balance + other.balance;
+            } else {
+                other.balance = 0;
+                balance = balance + other.balance;
 
+            }
+        } else{
+            System.out.println("You are not authorized to make this transfer");
         }
     }
 
@@ -53,19 +65,31 @@ public class BankAccount {
         System.out.println("NA:"+na);
     }
 
-    public void setPin(int h){
+    public void setPin(String h){
         pin = h;
         System.out.println("Your pin is: "+pin);
     }
 
+    public void authenticate(String p){
+        if (p==pin){
+            authenticated = true;
+        } else {
+
+        }
+    }
+
+    public void logout(){
+        authenticated = false;
+    }
+
 
 // 3 Constructors
-    public BankAccount(int p){
+    public BankAccount(String p){
         setPin(p);
         na=na+1;
     }
 
-    public BankAccount(String first_name, String last_name, int accountnumber, int p){
+    public BankAccount(String first_name, String last_name, int accountnumber, String p){
         balance = 0;
         setAcctnum(accountnumber);
         setName(first_name, last_name);
@@ -73,7 +97,7 @@ public class BankAccount {
         na=na+1;
     }
 
-    public BankAccount(String first_name, String last_name, int accountnumber, double bal, int p){
+    public BankAccount(String first_name, String last_name, int accountnumber, double bal, String p){
         balance = bal;
         setAcctnum(accountnumber);
         setName(first_name, last_name);

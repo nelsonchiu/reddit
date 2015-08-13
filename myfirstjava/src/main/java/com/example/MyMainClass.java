@@ -7,11 +7,12 @@ public class MyMainClass {
 
     public static void main(String [ ] args)
     {
-        BankAccount b1 = new BankAccount(222);
-        BankAccount b2 = new BankAccount("nelson", "chiu", 120202, 444);
-        BankAccount b3 = new BankAccount("wayne", "chiu", 123456, 300.00, 444);
-        b3.withdraw(200);
-        b3.withdraw(50);
+        BankAccount b1 = new BankAccount("peaches");
+        BankAccount b2 = new BankAccount("nelson", "chiu", 120202, "george");
+        BankAccount b3 = new BankAccount("wayne", "chiu", 123456, 300.00, "falls");
+        b2.withdraw(200,"george");
+        b3.withdraw(50,"falls");
+        b2.withdraw(200,"g");
         /*
         prnt(b1);
         prnt(b2);
