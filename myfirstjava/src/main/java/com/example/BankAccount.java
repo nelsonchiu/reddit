@@ -25,20 +25,15 @@ public class BankAccount {
         balance = bal;
     }
 
-    public void withdraw(int amount, int p){
-        if(p==pin){
-            if(amount <= balance){
-                balance = balance - amount;
-            }
-            else{
-                amount = (int)balance;
-                balance = 0;
-            }
-            System.out.printf("You withdrew %s and have %s remaining", amount, balance);
-        } else{
-            System.out.println("Incorrect pin");
+    public void withdraw(int amount){
+        if(amount <= balance){
+            balance = balance - amount;
         }
-
+        else{
+            amount = (int)balance;
+            balance = 0;
+        }
+        System.out.printf("You withdrew %s and have %s remaining", amount, balance);
 
     }
 
