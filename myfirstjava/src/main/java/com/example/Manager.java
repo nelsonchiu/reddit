@@ -10,10 +10,10 @@ public class Manager extends Employee{
     private int deptSize;
 
 // constructor
-    public Manager (String l, String f, int i, String dep, double s, int d){
+    public Manager (String l, String f, int i, String dep){
         super(l, f, i, dep);
-        salary = s;
-        deptSize = d;
+        //salary = s;
+        //deptSize = d;
     }
 
 // method
