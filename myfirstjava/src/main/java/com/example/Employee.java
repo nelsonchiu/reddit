@@ -21,11 +21,12 @@ public class Employee {
         System.out.println(last + " " + first + " " + id + " " + dept);
     }
 
+/*
 // methods - is it neccessary to make a toString when it's already created?
     public String toString(int a){
         return Integer.toString(a);
         // return "" + a;  //very unconventional, but this should work
     }
-
+*/
 
 }

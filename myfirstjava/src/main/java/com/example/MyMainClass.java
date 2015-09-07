@@ -12,12 +12,18 @@ public class MyMainClass {
         Employee e1 = new Employee("chiu", "nelson", 25214, "Engineering");
         Employee e2 = new Employee("choi", "anthony", 99929, "Sales");
         Employee e3 = new Employee("huang", "richard", 12345, "Operations");
-        String a = e3.toString(5);
-        System.out.println(a);
+        //String a = e3.toString(5);
+        //System.out.println(a);
+        System.out.println(e1);
+        System.out.println(e2);
+        System.out.println(e3);
 
         Manager m1 = new Manager("li", "edwin", 22222, "Finance", 200000.00, 6); //
         Manager m2 = new Manager("chang", "will", 33333, "Coffee", 10000.00, 4); //
-        System.out.println(m2.getLastName());
+        //System.out.println(m2.getLastName());
+        System.out.println(m1);
+        System.out.println(m2);
+
 /*
 // HW 7
         last_first p1 = new last_first("Pimpin Peter", "Nelson Chiu");
