@@ -7,12 +7,22 @@ public class MyMainClass {
 
     public static void main(String [ ] args)
     {
+
+// HW 8
+        Employee e1 = new Employee("chiu", "nelson", 25214, "Engineering");
+        Employee e2 = new Employee("choi", "anthony", 99929, "Sales");
+        Employee e3 = new Employee("huang", "richard", 12345, "Operations");
+        String a = e3.toString(5);
+        System.out.println(a);
+
+/*
 // HW 7
         last_first p1 = new last_first("Pimpin Peter", "Nelson Chiu");
         last_first p2 = new last_first("Georgeous Gina", "Nelson Chiu");
 
         Driver d = new Driver();
         d.play(p1,p2);
+*/
 
 /*
 /// HW Assigments 1 through 6
